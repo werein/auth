@@ -1,0 +1,22 @@
+# Configure engine from yaml, you can set different config per environment
+
+default: &default
+
+  # Set services, which can be used to authenthication
+
+  # Twitter
+  twitter_key: '123'
+  twitter_secret: '123'
+
+  # Facebook
+  # facebook_key: '123'
+  # facebook_secret: '123'
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default

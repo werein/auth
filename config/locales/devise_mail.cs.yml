@@ -1,0 +1,20 @@
+cs:
+  devise:
+    mailer:
+      confirmation_instructions:
+        title: Instrukce pro potvrzení účtu
+        welcome: 'Vítejte %{email}!'
+        description: 'Obdrželi jsme požadavek registrace na našich stránkách, pro potvrzení klikněte prosím na odkaz níže do 2 dnů od registrace, v opačném případě tento email ignorujte.'
+        confirm: Potvrdit registraci
+      reset_password_instructions:
+        title: Instrukce k nastavení nového hesla
+        hi: 'Ahoj %{email}!'
+        description: 'Zaregistrovali jsme požadavek na změnu hesla, změnit heslo můžete kliknutím na odkaz uvedený níže.'
+        ingore: 'Pokud jste požadavek nezadali Vy, ignorujte tento email.'
+        wont_change: 'Vaše heslo se nezmění, dokud nevytvoříte nové přes tento odkaz.'
+        reset: Vytvořit nové heslo
+      unlock_instructions:
+        title: unlock_instructions
+        hi: 'Ahoj %{email}!'
+        description: Váš účet byl zablokován z důvodu vysokého počtu neúspěšných přihlášení. Svůj účet obnovíte kliknutím na odkaz níže.
+        unlock: Odemknout účet

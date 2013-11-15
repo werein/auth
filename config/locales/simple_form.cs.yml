@@ -1,0 +1,7 @@
+cs:
+  simple_form:
+    placeholders:
+      user:
+        email: E-mail
+        password: Heslo
+        password_confirmation: Potvrzení hesla

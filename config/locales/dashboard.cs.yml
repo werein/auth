@@ -1,0 +1,15 @@
+cs:
+  auth:
+    dashboard:
+      index:
+        title: Prosím přihlašte se
+        alternatives: Další možnosti
+        sign_up: Nemáte účet? Zaregistrujte se
+        remember_me: Zapamatovat si
+        submit: Přihlásit
+      authenticated:
+        title: Váš účet
+        alternatives: Další možnosti
+        public_profile: Veřejný profil
+        edit: Upravit
+        logout: Odhlásit se

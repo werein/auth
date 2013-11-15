@@ -1,0 +1,54 @@
+cs:
+  devise:
+    sessions:
+      new:
+        title: Prosím přihlašte se
+        alternatives: Další možnosti
+        submit: Přihlásit se
+        remember_me: Zapamatovat si
+    registrations:
+      new:
+        title: Prosím zaregistrujte se
+        alternatives: Další možnosti
+        submit: Registrovat
+      edit:
+        title: Editace profilu
+        waiting: 'Čekáme na potvrzení emailu: %{email}'
+        hint:
+          password: 'Heslo vyplněte pouze, pokud jej chcete změnit'
+          current_password: Pro uložení je potřeba zadat Vaše momentlální heslo
+        alternatives: Jiné možnosti
+        submit: Odeslat
+    unlocks:
+      new:
+        title: Odblokování účtu
+        alternatives: Další možnosti
+        hint: Na email Vám bude odeslán odkaz k odblokování Vašeho účtu.
+        submit: Odeslat
+    passwords:
+      edit:
+        title: Nové heslo
+        alternatives: Další možnosti
+        submit: Změnit heslo
+      new:
+        title: Zapomenuté heslo
+        alternatives: Další možnosti
+        hint: Na email Vám bude odeslán odkaz k vytvoření nového hesla.
+        submit: Odeslat
+    confirmations:
+      new:
+        title: Ověření účtu
+        alternatives: Další možnosti
+        hint: Na email Vám bude odeslán nový ověřovací kód.
+        submit: Odeslat
+    shared:
+      links:
+        sign_in: Přihlásit se
+        sign_up: Registrovat se
+        forgot_password: Zapomenuté heslo
+        didnt_received_confirmation_instruction: Ověření účtu
+        didnt_received_unlock_instruction: Odblokování účtu
+        account_settings: Nastavení účtu
+      providers:
+        sign_in_with: 'Přihlásit se přes %{provider}'
+        sign_up_with: 'Přidat %{provider} k účtu'

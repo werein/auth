@@ -1,0 +1,14 @@
+#content
+  .span7
+    .legend
+      %legend= t '.title'
+      #auth_signup
+        = render 'vendor/omniauth/signup'
+    .right
+      = t '.already_registred'
+      = link_to t('.login'), login_url, class: 'btn btn-info'
+  .span5
+    .legend
+      %legend= t '.use_another_account'
+    .login-buttons
+      = render 'vendor/omniauth/providers'

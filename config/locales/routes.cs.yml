@@ -1,0 +1,8 @@
+cs:
+  routes:
+    auth: auth
+    users: uzivatele
+    login: prihlasit
+    logout: odhlasit
+    register: registrace
+    edit: upravit

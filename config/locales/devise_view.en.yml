@@ -1,0 +1,54 @@
+en:
+  devise:
+    sessions:
+      new:
+        title: Please sign in
+        alternatives: Other options
+        submit: Sign in
+        remember_me: Remember me
+    registrations:
+      new:
+        title: Please sign up
+        alternatives: Other options
+        submit: Sign up
+      edit:
+        title: Edit profile
+        waiting: 'Currently waiting confirmation for: %{email}'
+        hint:
+          password: "leave blank if you don't want to change it"
+          current_password: we need your current password to confirm your changes
+        alternatives: Other options
+        submit: Submit
+    unlocks:
+      new:
+        title: Unlock account
+        alternatives: Other options
+        hint: We'll send you unlock code
+        submit: Submit
+    passwords:
+      edit:
+        title: New password
+        alternatives: Other options
+        submit: Change password
+      new:
+        title: Forgot password?
+        alternatives: Other options
+        hint: "We'll send link, where can you chang it"
+        submit: Submit
+    confirmations:
+      new:
+        title: Confirmation
+        alternatives: Other options
+        hint: We'll send you new confirmation code
+        submit: Submit
+    shared:
+      links:
+        sign_in: Sign in
+        sign_up: Sign up
+        forgot_password: Forgot password?
+        didnt_received_confirmation_instruction: Didn't received confirmation instruction?
+        didnt_received_unlock_instruction: Didn't received unlock instruction?
+        account_settings: Account settings
+      providers:
+        sign_in_with: 'Sign in with %{provider}'
+        sign_up_with: 'Add %{provider} to your account'

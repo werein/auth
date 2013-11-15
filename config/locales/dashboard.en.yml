@@ -1,0 +1,15 @@
+en:
+  auth:
+    dashboard:
+      index:
+        title: Please sign in
+        alternatives: Other options
+        sign_up: Don't have account? Please sign up
+        remember_me: Remember me
+        submit: Submit
+      authenticated:
+        title: Your account
+        alternatives: Other options
+        public_profile: Public profile
+        edit: Edit
+        logout: Logout

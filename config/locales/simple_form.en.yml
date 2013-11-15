@@ -1,0 +1,7 @@
+en:
+  simple_form:
+    placeholders:
+      user:
+        email: E-mail
+        password: Password
+        password_confirmation: Password confirmation
