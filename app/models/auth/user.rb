@@ -7,7 +7,7 @@ module Auth
 
     before_validation :set_role
 
-    mount_uploader :avatar, Uploadable::ImageUploader
+    mount_uploader :avatar, Uploadable::Image
     store_in_background :avatar
 
     # Include default devise modules. Others available are:
@@ -17,10 +17,10 @@ module Auth
            :lockable, :timeoutable, :omniauthable, :confirmable #, :async
 
     # Allow acces to ability from user
-    def ability
-      @ability ||= Ability.new(self)
-    end
-    delegate :can?, :cannot?, to: :ability
+    # def ability
+    #   @ability ||= Ability.new(self)
+    # end
+    # delegate :can?, :cannot?, to: :ability
 
     # Return +boolean+ if user has given role
     def has_role? role_sym
