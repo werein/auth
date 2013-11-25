@@ -7,4 +7,5 @@ Auth::User.where(email: "info@imin.cz").first_or_create do |user|
   user.email = "info@imin.cz"
   user.roles = [ Auth::Role.find_by(name: 'Admin') ]
   user.password = 'Project28159349'
+  user.confirmed_at = Time.zone.now
 end
