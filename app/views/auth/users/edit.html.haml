@@ -1,9 +1,0 @@
-#content.span12
-  .legend
-    %legend= t '.title'
-  = simple_form_for @user, html: { class: 'form-horizontal' } do |f|
-    = render 'shared/errors', object: @user
-
-    = f.input :name
-    = f.input :avatar
-    = f.button :submit, t('misc.save'), class: 'btn btn-block btn-large btn-info'

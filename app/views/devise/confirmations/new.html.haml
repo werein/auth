@@ -1,14 +1,11 @@
 #content
-  .span8.offset2
-    .row-fluid
-      .span5
-        .row-fluid
-          %legend= t '.title'
-        = simple_form_for resource, as: resource_name, url: confirmation_path(resource_name) do |f|
-          = f.input :email, label: false, hint: t('.hint'), input_html: { class: 'span12' }
-          = f.button :submit, t('.submit'), class: 'btn btn-info btn-block'
-      .span5.offset2
-        .right
-          %legend= t '.alternatives'
-          = render "devise/shared/providers"
-          = render "devise/shared/links"
+  .col-md-6
+    %legend= t '.title'
+    = simple_form_for resource, as: resource_name, url: confirmation_path(resource_name) do |f|
+      = f.input :email, label: false, hint: t('.hint')
+      = f.button :submit, t('.submit'), class: 'btn btn-info btn-block'
+  .col-md-6
+    .right
+      %legend= t '.alternatives'
+      = render "devise/shared/providers"
+      = render "devise/shared/links"

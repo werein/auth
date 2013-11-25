@@ -1,16 +1,12 @@
 #content
-  .span8.offset2
-    .row-fluid
-      .span5
-        .row-fluid
-          %legend= t '.title'
-          = simple_form_for resource, as: resource_name, url: password_path(resource_name), method: :put do |f|
-            = f.input :reset_password_token, as: :hidden
-            = f.input :password, label: false, input_html: { class: 'span12' }
-            = f.input :password_confirmation, label: false, input_html: { class: 'span12' }
-            = f.button :submit, t('.submit'), class: 'btn btn-info btn-block'
-      .span5.offset2
-        .right
-          %legend= t '.alternatives'
-          = render "devise/shared/providers"
-          = render "devise/shared/links"
+  .col-md-6
+    %legend= t '.title'
+    = simple_form_for resource, as: resource_name, url: password_path(resource_name), method: :put do |f|
+      = f.input :reset_password_token, as: :hidden
+      = f.input :password, label: false, input_html: { class: 'span12' }
+      = f.input :password_confirmation, label: false, input_html: { class: 'span12' }
+      = f.button :submit, t('.submit'), class: 'btn btn-info btn-block'
+  .col-md-6.right
+    %legend= t '.alternatives'
+    = render "devise/shared/providers"
+    = render "devise/shared/links"

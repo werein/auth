@@ -1,21 +1,17 @@
 #content
-  .span8.offset2
-    .row-fluid
-      .span5
-        .row-fluid
-          %legend= t '.title'
-          = simple_form_for :user, url: user_session_path do |f|
-            = f.input :email, label: false, input_html: { class: 'span12' }
-            = f.input :password, label: false, input_html: { class: 'span12' }
-            = f.input :remember_me, as: :boolean, label: false, inline_label: t('.remember_me')
-            = f.button :submit, t('.submit'), class: 'btn btn-info btn-block'
-      .span5.offset2
-        .right
-          %legend= t '.alternatives'
-          - if Auth::Config.twitter_key
-            = link_to 'Twitter', '/auth/users/auth/twitter', class: 'btn btn-block btn-primary' if Auth::Config.twitter_key
-            %br/
-          - if Auth::Config.facebook_key
-            = link_to 'Facebook', '/auth/users/auth/facebook', class: 'btn btn-block btn-primary'
-            %br/
-          = link_to t('.sign_up'), new_user_registration_path
+  .col-md-6
+    %legend= t '.title'
+    = simple_form_for :user, url: user_session_path do |f|
+      = f.input :email, label: false, input_html: { class: 'span12' }
+      = f.input :password, label: false, input_html: { class: 'span12' }
+      = f.input :remember_me, as: :boolean, label: false, inline_label: t('.remember_me')
+      = f.button :submit, t('.submit'), class: 'btn btn-info btn-block'
+  .col-md-6.right
+    %legend= t '.alternatives'
+    - if Auth::Config.twitter_key
+      = link_to 'Twitter', '/auth/users/auth/twitter', class: 'btn btn-block btn-primary' if Auth::Config.twitter_key
+      %br/
+    - if Auth::Config.facebook_key
+      = link_to 'Facebook', '/auth/users/auth/facebook', class: 'btn btn-block btn-primary'
+      %br/
+    = link_to t('.sign_up'), new_user_registration_path

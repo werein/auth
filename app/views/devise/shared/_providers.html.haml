@@ -1,4 +1,4 @@
 - if devise_mapping.omniauthable?
   - resource_class.omniauth_providers.each do |provider|
-    = link_to t(".sign_#{signed_in? ? 'up' : 'in'}_with", provider: provider.capitalize), "/auth/users/auth/#{provider}", class: 'btn btn-block'
+    = link_to t(".sign_#{signed_in? ? 'up' : 'in'}_with", provider: provider.capitalize), "/auth/users/auth/#{provider}", class: 'btn btn-primary btn-block'
     %br/
