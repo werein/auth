@@ -39,5 +39,5 @@ class ActiveSupport::TestCase
   include Capybara::DSL
   include Capybara::Assertions
 
-  include Blog::Engine.routes.url_helpers
+  include Auth::Engine.routes.url_helpers
 end
