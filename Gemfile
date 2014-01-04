@@ -13,11 +13,25 @@ gemspec
 # To use debugger
 # gem 'debugger'
 
-# Use head version of engines
-gem 'uploadable', git: 'git@git.imin.cz:project/uploadable.git', branch: 'master'
-gem 'testable', git: 'git@git.imin.cz:project/testable.git', branch: 'master'
-gem 'ckeditor-outsourced', git: 'git@git.imin.cz:project/ckeditor-outsourced.git', branch: 'master'
+gem 'core', branch: 'master',
+  git: 'git@git.imin.cz:project/core.git'
 
-gem 'core', git: 'git@git.imin.cz:project/core.git', branch: 'master'
+# Dependencies core
+gem 'testable', '~> 1.0', branch: 'master',
+  git: 'git@git.imin.cz:project/testable.git'
 
-gem 'ckeditor', git: 'https://github.com/galetahub/ckeditor.git', branch: 'master'
+gem 'ckeditor-outsourced', '~> 1.0', branch: 'master',
+  git: 'git@git.imin.cz:project/ckeditor-outsourced.git'
+
+gem 'uploadable', '~> 1.1', branch: 'master',
+  git: 'git@git.imin.cz:project/uploadable.git'
+
+gem 'extension-multiselect', '~> 1.0', branch: 'master',
+  git: 'git@git.imin.cz:project/extension-multiselect.git'
+
+gem 'sidrjs-rails', '~> 1.0', branch: 'master',
+  git: 'git@git.imin.cz:project/sidrjs-rails.git'
+
+# Demo dependencies 
+gem 'bootstrap-sass', '~> 3'
+gem 'i18n-tasks', '~> 0.2', github: 'glebm/i18n-tasks'
