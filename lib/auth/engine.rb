@@ -17,10 +17,6 @@ module Auth
       Decorators.register! Engine.root, Rails.root
     end
 
-    initializer :load_helper do
-      ActionView::Base.send :include, Auth::ApplicationHelper
-    end
-
     initializer :append_migrations do |app|
       unless app.root.to_s.match root.to_s
         config.paths["db/migrate"].expanded.each do |expanded_path|

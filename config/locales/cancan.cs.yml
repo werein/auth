@@ -1,0 +1,4 @@
+cs:
+  cancan:
+    access_denied: Nejste oprávněn pro přístup na tuto stránku.
+    access_denied_not_logged: Prosím přihlašte se / zaregistrujte se před pokračováním na Vámi požadovanou stránku.

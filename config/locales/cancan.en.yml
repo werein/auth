@@ -1,0 +1,4 @@
+en:
+  cancan:
+    access_denied: You are not authorized to access this page.
+    access_denied_not_logged: Please sign in or sign up to continue on this page.
