@@ -27,6 +27,4 @@ Gem::Specification.new do |s|
   s.add_dependency "cancan", "~> 1.6"
   s.add_dependency "route_translator", "~> 3.1"
   s.add_dependency "meta-tags", "~> 1.5"
-
-  s.add_development_dependency "testable"
 end
