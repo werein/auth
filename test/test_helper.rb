@@ -5,39 +5,19 @@ ENV['RAILS_ENV'] = 'test'
 
 require File.expand_path('../dummy/config/environment.rb',  __FILE__)
 require 'rails/test_help'
-
-# MiniTest for Rails
-require 'minitest/rails'
-require 'minitest/rails/capybara'
-require 'minitest/pride'
-
-# Stubbing and mocking
-require 'mocha/setup'
-
 require 'testable'
+require 'capybara/rails'
+include Testable::Helpers
+
+# Load factories
+Dir["#{File.dirname(__FILE__)}/factories/*.rb"].each { |f| require f }
 
 Rails.backtrace_cleaner.remove_silencers!
 
-# Load support files
-Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
-
-# Load fixtures from the engine
-# if ActiveSupport::TestCase.method_defined?(:fixture_path=)
-#   ActiveSupport::TestCase.fixture_path = File.expand_path('../fixtures', __FILE__)
-# end
-
-include Testable::Helpers
-
-if defined? Warden
-  include Warden::Test::Helpers
-  Warden.test_mode!
+class ActiveSupport::TestCase
+  include Auth::Engine.routes.url_helpers
 end
 
-class ActiveSupport::TestCase
-  include FactoryGirl::Syntax::Methods
-
+class ActionDispatch::IntegrationTest
   include Capybara::DSL
-  include Capybara::Assertions
-
-  include Auth::Engine.routes.url_helpers
 end
