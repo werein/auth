@@ -1,0 +1,10 @@
+en:
+  auth:
+    helper:
+      create_button:
+        create: 'Create %{model}'
+      manage_buttons:
+        create: Create
+        edit: Edit
+        destroy: Destroy
+        view: View all

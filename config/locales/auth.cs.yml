@@ -1,0 +1,10 @@
+cs:
+  auth:
+    helper:
+      create_button:
+        create: 'Vytvořit - %{model}'
+      manage_buttons:
+        create: Vytvořit
+        edit: Upravit
+        destroy: Smazat
+        view: Zobrazit vše
