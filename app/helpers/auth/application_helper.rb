@@ -2,7 +2,7 @@ module Auth
   module ApplicationHelper
 
     def create_button klass, options = {}
-      link_to gt('pencil', t('auth.helper.create_button.create', model: klass.model_name.human.downcase)), new_polymorphic_path(klass), style: ('display:none' unless manage?), class: "manage btn btn-info btn-text btn-create", 'data-no-turbolink' => true if can? :create, klass
+      link_to gt('pencil', t('auth.helper.create_button.create', model: klass.model_name.human.downcase)), new_polymorphic_path(klass), class: ('hidden' unless manage?), class: "manage btn btn-info btn-text btn-create", 'data-no-turbolink' => true if can? :create, klass
     end
 
     def manage_icons object, options = {}
