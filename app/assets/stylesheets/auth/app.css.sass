@@ -7,6 +7,22 @@
 //
 // You're free to add application-wide styles to this file and they'll appear at the top of the
 // compiled file, but it's generally better to create a new file per style scope.
-//
-//= require_tree .
-//
+
+#auth-dashboard, #devise-passwords, #devise-confirmations, #devise-registrations, #devise-sessions, #devise-unlocks
+  #main-content
+    .perform, .alternatives
+      +make-md-column(6)
+      .btn
+        @extend .btn-block
+        @extend .btn-primary
+    .alternatives
+      text-align: right
+
+#auth-dashboard.authenticated, #auth-users.show
+  #main-content
+    +make-md-column(12)
+
+#auth-users.show
+  #main-content
+    header
+      text-align: center

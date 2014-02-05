@@ -1,6 +1,7 @@
-#content
-  %header.page-header
-    %h2= editable @user, :name
+%section#main-content
+  %header.main
+    .content
+      %h2= editable @user, :name
   = image_tag @user.avatar.thumb if @user.avatar?
   = link_to t('.public_profile'), @user, class: 'btn btn-default btn-block'
   = link_to t('.edit'), edit_user_registration_path, class: 'btn btn-default btn-block'

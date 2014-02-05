@@ -1,14 +1,16 @@
-#content
-  .col-md-6
-    %header.page-header
-      %h2= t '.title'
+%section#main-content
+  .perform
+    %header.main
+      .content
+        %h2= t '.title'
     = simple_form_for resource, as: resource_name, url: registration_path(resource_name) do |f|
-      = f.input :email, label: false, input_html: { class: 'span12' }
-      = f.input :password, label: false, input_html: { class: 'span12' }
-      = f.input :password_confirmation, label: false, input_html: { class: 'span12' }
-      = f.button :submit, t('.submit'), class: 'btn btn-info btn-block'
-  .col-md-6.right
-    %header.page-header
-      %h2= t '.alternatives'
+      = f.input :email, label: false
+      = f.input :password, label: false
+      = f.input :password_confirmation, label: false
+      = f.button :submit, t('.submit')
+  .alternatives
+    %header.main
+      .content
+        %h2= t '.alternatives'
     = render "devise/shared/providers"
     = render "devise/shared/links"
