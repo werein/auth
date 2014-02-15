@@ -1,8 +1,7 @@
-%section#main-content
+%section#content
   .perform
     %header.main
-      .content
-        %h2= t '.title'
+      %h2= t '.title'
     = simple_form_for resource, as: resource_name, url: session_path(resource_name) do |f|
       = f.input :email, label: false
       = f.input :password, label: false
@@ -10,7 +9,6 @@
       = f.button :submit, t('.submit')
   .alternatives
     %header.main
-      .content
-        %h2= t '.alternatives'
+      %h2= t '.alternatives'
     = render "devise/shared/providers"
     = render "devise/shared/links"

@@ -9,7 +9,7 @@
 // compiled file, but it's generally better to create a new file per style scope.
 
 #auth, #devise
-  #main-content
+  #content
     .perform, .alternatives
       +make-md-column(6)
       .btn
@@ -19,10 +19,10 @@
       text-align: right
 
 #auth.dashboard.authenticated, #auth.users.show
-  #main-content
+  #content
     +make-md-column(12)
 
 #auth.users.show
-  #main-content
+  #content
     header
       text-align: center
