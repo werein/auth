@@ -7,24 +7,14 @@ Auth::Engine.routes.draw do
     root to: 'dashboard#index'
   end
 
+  devise_scope :user do 
+    providers = Regexp.union(Devise.omniauth_providers.map(&:to_s))
+    get 'users/auth/:action/callback', constraints: { action: providers }, to: 'omniauth_callbacks', as: :omniauth_callback
+  end
+
   localized do 
-    
-    devise_scope :user do 
-      providers = Regexp.union(Devise.omniauth_providers.map(&:to_s))
-      match 'users/auth/:provider', 
-        constraints: { provider: providers },
-        to: 'omniauth_callbacks#passthru', 
-        as: :omniauth_authorize, 
-        via: [:get, :post]
-
-      match 'users/auth/:action/callback', 
-        constraints: { action: providers },
-        to: 'omniauth_callbacks', 
-        as: :omniauth_callback, 
-        via: [:get, :post]
-    end
-
-    devise_for  :users, class_name: 'Auth::User', module: :devise,
+    devise_for  :users, class_name: 'Auth::User', module: :devise, 
+                controllers: { omniauth_callbacks: 'auth/omniauth_callbacks' },
                 path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }
 
     resources :users, except: [:create, :index] do
