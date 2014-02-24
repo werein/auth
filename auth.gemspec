@@ -18,7 +18,6 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 4.0"
   s.add_dependency "core", "~> 1.0"
-  s.add_dependency "decorators", "~> 1.0"
   s.add_dependency "devise", "~> 3.1"
   # s.add_dependency "devise-async", "~> 0.8"
   s.add_dependency "omniauth", "~> 1.1"
