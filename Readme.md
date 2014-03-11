@@ -44,7 +44,7 @@ As default are defined 2 abilities. They can be used in whole app or engine. Fee
 
 Auth support multiple authorizations for single user. For authorization is used Devise and OmniAuth.
 
-**Currently supports** **
+**Currently supports**
 
 * Email authorization
 * Twitter
