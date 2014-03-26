@@ -1,5 +1,5 @@
-require 'core'
-
+require 'foundationstone'
+require 'decorators'
 require 'devise'
 require 'omniauth'
 require 'omniauth-twitter'
@@ -7,6 +7,7 @@ require 'omniauth-facebook'
 require 'route_translator'
 require 'cancan'
 require 'meta_tags'
+require 'uppr'
 
 module Auth
   class Engine < ::Rails::Engine

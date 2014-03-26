@@ -7,7 +7,7 @@ module Auth
 
     before_validation :set_role
 
-    mount_uploader :avatar, Uploadable::Image
+    mount_uploader :avatar, Uppr::Image
     store_in_background :avatar
 
     # Include default devise modules. Others available are:
