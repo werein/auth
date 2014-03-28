@@ -14,31 +14,11 @@ gemspec
 # gem 'debugger'
 
 gem 'foundationstone', branch: :master, github: 'werein/foundationstone'
-
-# # Use head version of engines
-# gem 'core', 
-#   branch: 'master',
-#   git: 'git@git.imin.cz:project/core.git'
-
-# # Core dependencies
-# gem 'ckeditor-outsourced', branch: 'master',
-#   git: 'git@git.imin.cz:project/ckeditor-outsourced.git'
-
-# gem 'uploadable', branch: 'master',
-#   git: 'git@git.imin.cz:project/uploadable.git'
-
-# gem 'extension-multiselect', branch: 'master',
-#   git: 'git@git.imin.cz:project/extension-multiselect.git'
-
-# gem 'sidrjs-rails', branch: 'master',
-#   git: 'git@git.imin.cz:project/sidrjs-rails.git'
-
-# # Test dependencies
-# gem 'testable', 
-#   branch: 'master',
-#   git: 'git@git.imin.cz:project/testable.git'
+gem 'formtastic', branch: :master, github: 'justinfrench/formtastic'
 
 # # Demo dependencies 
-# gem 'compass-rails', github: 'Compass/compass-rails'
-# gem 'bootstrap-sass', '~> 3.1'
-# gem 'i18n-tasks', '~> 0.2'
+gem 'compass-rails'
+gem 'bootstrap-sass', '~> 3.1'
+gem 'sass-rails', '~> 4.0.2'
+gem 'rails_admin'
+gem 'formtastic-bootstrap'
