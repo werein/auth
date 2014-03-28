@@ -27,6 +27,8 @@ Gem::Specification.new do |s|
   s.add_dependency 'meta-tags', '~> 1.5'
   s.add_dependency 'decorators', '~> 1.0'
   s.add_dependency 'uppr', '~> 1.0'
+  s.add_dependency 'formtastic'
 
   s.add_development_dependency 'tuberack'
+  s.add_development_dependency 'x-editable-rails'
 end

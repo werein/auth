@@ -8,6 +8,7 @@ require 'route_translator'
 require 'cancan'
 require 'meta_tags'
 require 'uppr'
+require 'formtastic'
 
 module Auth
   class Engine < ::Rails::Engine
