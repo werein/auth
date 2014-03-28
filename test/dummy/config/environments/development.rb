@@ -22,29 +22,8 @@ Dummy::Application.configure do
   # Raise an error on page load if there are pending migrations
   config.active_record.migration_error = :page_load
 
-  config.action_mailer.delivery_method = :letter_opener
-
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
-
-  # # Configure core, see project/core/config for more informations
-  # ::Core.config do |config|
-  #   config.app_name           = 'Project'
-  #   config.disqus             = 'project_disqus'
-  #   config.errbit_api_key     = '123'
-  # end
-  
-  # ::Auth.config do |config|
-  #   # If you want add twitter as login option
-  #   # config.twitter_id      = 'KEY'
-  #   # config.twitter_secret  = 'SECRET'
-  #   config.twitter_id       = 'NOdUNkKMxzKSq0QZzNAA'
-  #   config.twitter_secret   = '5kzZcfxi5B5Cp45qexi81q10qlLZOT4Gs310nFWE1M8'
-
-  #   # If you want add facebook as login option
-  #   # config.facebook_id      = 'KEY'
-  #   # config.facebook_secret  = 'SECRET'
-  # end
 end
