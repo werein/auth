@@ -1,5 +1,5 @@
 module Auth
-  class ApplicationController < Core::ApplicationController
+  class ApplicationController < ::ApplicationController
 
     # Current user ability
     def current_ability
