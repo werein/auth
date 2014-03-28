@@ -1,7 +1,6 @@
-%section#content
-  %header.main
-    %h2= editable @user, :name
-  = image_tag @user.avatar.thumb if @user.avatar?
-  = link_to t('.public_profile'), @user, class: 'btn btn-default btn-block'
-  = link_to t('.edit'), edit_user_registration_path, class: 'btn btn-default btn-block'
-  = link_to t('.logout'), destroy_user_session_path, method: :delete, class: 'btn btn-block btn-danger'
+%header.main
+  %h2= editable @user, :name
+= image_tag @user.avatar.thumb if @user.avatar?
+= link_to t('.public_profile'), @user, class: 'btn btn-default btn-block'
+= link_to t('.edit'), edit_user_registration_path, class: 'btn btn-default btn-block'
+= link_to t('.logout'), destroy_user_session_path, method: :delete, class: 'btn btn-block btn-danger'

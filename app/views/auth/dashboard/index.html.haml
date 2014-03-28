@@ -1,19 +1,22 @@
-%section#content
-  .perform
-    %header.main
-      %h2= t '.title'
-    = simple_form_for :user, url: user_session_path do |f|
-      = f.input :email, label: false
-      = f.input :password, label: false
-      = f.input :remember_me, as: :boolean, label: false, inline_label: t('.remember_me')
-      = f.button :submit, t('.submit')
-  .alternatives
-    %header.main
-      %h2= t '.alternatives'
+.panel.panel-default
+  .panel-heading= t '.title'
+  .panel-body
+    = semantic_form_for :user, url: user_session_path do |f|
+      = f.inputs do
+        = f.input :email
+        = f.input :password
+      .row
+        .col-xs-6
+          = f.inputs do
+            = f.input :remember_me, as: :boolean
+        .col-xs-6
+          = f.actions do 
+            = f.action :submit, label: t('.submit')
+    .login-or
+      %hr.hr-or
+        %span.span-or or
     - if Auth::Config.twitter_key
-      = link_to 'Twitter', '/auth/users/auth/twitter', class: 'btn btn-block btn-primary' if Auth::Config.twitter_key
-      %br/
+      = link_to 'Twitter', '/auth/users/auth/twitter', class: 'btn btn-lg btn-block btn-primary'
     - if Auth::Config.facebook_key
-      = link_to 'Facebook', '/auth/users/auth/facebook', class: 'btn btn-block btn-primary'
-      %br/
-    = link_to t('.sign_up'), new_user_registration_path
+      = link_to 'Facebook', '/auth/users/auth/facebook', class: 'btn btn-lg btn-block btn-primary'
+  .panel-footer= link_to t('.sign_up'), new_user_registration_path

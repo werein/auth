@@ -1,18 +1,20 @@
-%section#content
-  .perform
-    %header.main
-      %h2= t '.title'
-    = simple_form_for resource, as: resource_name, url: registration_path(resource_name), method: :put do |f|
-      = f.input :name
-      = f.input :email
-      = f.input :avatar
-      = t('.waiting', email: resource.unconfirmed_email) if devise_mapping.confirmable? && resource.pending_reconfirmation?
-      = f.input :password, label: false
-      = f.input :password_confirmation, label: false, hint: t('.hint.password')
-      = f.input :current_password, hint: t('.hint.current_password')
-      = f.button :submit, t('.submit')
-  .alternatives
-    %header.main
-      %h2= t '.alternatives'
+.panel.panel-default
+  .panel-heading= t '.title'
+  .panel-body
+    = devise_error_messages!
+    = semantic_form_for resource, as: resource_name, url: registration_path(resource_name), method: :put do |f|
+      = f.inputs do
+        = f.input :name
+        = f.input :email
+        = f.input :avatar
+        = t('.waiting', email: resource.unconfirmed_email) if devise_mapping.confirmable? && resource.pending_reconfirmation?
+        = f.input :password, label: false
+        = f.input :password_confirmation, label: false, hint: t('.hint.password')
+        = f.input :current_password, hint: t('.hint.current_password')
+      = f.actions do 
+        = f.action :submit, label: t('.submit')
+    .login-or
+      %hr.hr-or
+        %span.span-or or
     = render "devise/shared/providers"
-    = render "devise/shared/links"
+  .panel-footer= render "devise/shared/links"

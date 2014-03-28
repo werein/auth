@@ -1,14 +1,16 @@
-%section#content
-  .perform
-    %header.main
-      %h2= t '.title'
-    = simple_form_for resource, as: resource_name, url: session_path(resource_name) do |f|
-      = f.input :email, label: false
-      = f.input :password, label: false
-      = f.input :remember_me, as: :boolean, label: false, inline_label: t('.remember_me') if devise_mapping.rememberable?
-      = f.button :submit, t('.submit')
-  .alternatives
-    %header.main
-      %h2= t '.alternatives'
+.panel.panel-default
+  .panel-heading= t '.title'
+  .panel-body
+    = devise_error_messages!
+    = semantic_form_for resource, as: resource_name, url: session_path(resource_name) do |f|
+      = f.inputs do
+        = f.input :email, label: false
+        = f.input :password, label: false
+        = f.input :remember_me, as: :boolean, label: false, inline_label: t('.remember_me') if devise_mapping.rememberable?
+      = f.actions do 
+        = f.action :submit, label: t('.submit')
+    .login-or
+      %hr.hr-or
+        %span.span-or or
     = render "devise/shared/providers"
-    = render "devise/shared/links"
+  .panel-footer= render "devise/shared/links"
