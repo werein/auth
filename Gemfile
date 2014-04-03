@@ -12,13 +12,12 @@ gemspec
 
 # To use debugger
 # gem 'debugger'
-
-gem 'foundationstone', branch: :master, github: 'werein/foundationstone'
-gem 'formtastic', branch: :master, github: 'justinfrench/formtastic'
-
 # # Demo dependencies 
 gem 'compass-rails'
 gem 'bootstrap-sass', '~> 3.1'
 gem 'sass-rails', '~> 4.0.2'
 gem 'rails_admin'
+gem 'formtastic', github: 'justinfrench/formtastic'
 gem 'formtastic-bootstrap'
+
+gem 'foundationstone', branch: :master, github: 'werein/foundationstone'
