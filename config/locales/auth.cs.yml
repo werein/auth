@@ -1,10 +1,27 @@
+---
 cs:
   auth:
+    cancan:
+      authorize: Prosím přihlašte se. Nevíme, zdali máte k požadované akci přístup.
+      unauthorized: Nemáte oprávnění k této akci.
+    dashboard:
+      authenticated:
+        alternatives: Další možnosti
+        edit: Upravit
+        logout: Odhlásit se
+        public_profile: Veřejný profil
+        title: Váš účet
+      index:
+        alternatives: Další možnosti
+        remember_me: Zapamatovat si
+        sign_up: Nemáte účet? Zaregistrujte se
+        submit: Přihlásit
+        title: Prosím přihlašte se
     helper:
       create_button:
-        create: 'Vytvořit - %{model}'
+        create: Vytvořit - %{model}
       manage_buttons:
         create: Vytvořit
-        edit: Upravit
         destroy: Smazat
+        edit: Upravit
         view: Zobrazit vše

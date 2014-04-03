@@ -1,0 +1,13 @@
+---
+cs:
+  errors:
+    messages:
+      already_confirmed: byl již potvrzen, prosím, zkuste se přihlásit
+      confirmation_period_expired: musí být potvrzen během %{period}, požádejte prosím
+        o nový
+      expired: vypršel, požádejte prosím o nový
+      not_found: nenalezen
+      not_locked: nebyl uzamčen
+      not_saved:
+        one: "%{resource} nebyl uložen kvůli chybě:"
+        other: "%{resource} nebyl uložen kvůli %{count} chybám:"

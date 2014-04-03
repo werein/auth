@@ -1,8 +1,9 @@
+---
 cs:
   routes:
     auth: auth
-    users: uzivatele
+    edit: upravit
     login: prihlasit
     logout: odhlasit
     register: registrace
-    edit: upravit
+    users: uzivatele

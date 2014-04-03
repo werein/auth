@@ -1,7 +1,11 @@
 ::ApplicationController.class_eval do
-  # CanCan Ability, redirect when user have no access
+
   rescue_from CanCan::AccessDenied do |exception|
-    signed_in? ? redirect_back(alert: t('cancan.access_denied')) : redirect_to(auth.root_path, notice: t('cancan.access_denied_not_logged'))
+    if signed_in?
+      redirect :back, alert: t('auth.cancan.unauthorized')
+    else
+      redirect_to auth.root_path, notice: t('auth.cancan.authorize')
+    end
   end
 
   def xeditable? object

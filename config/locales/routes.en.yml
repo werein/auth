@@ -1,8 +1,9 @@
+---
 en:
   routes:
     auth: auth
-    users: users
+    edit: edit
     login: login
     logout: logout
     register: register
-    edit: edit
+    users: users

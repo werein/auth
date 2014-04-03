@@ -1,8 +1,58 @@
+---
 cs:
-  created_updated_at: &cuat
-    created_at: Vytvořeno
-    updated_at: Aktualizováno
   activerecord:
+    attributes:
+      auth/assignment:
+        created_at: Vytvořeno
+        role: Oprávnění
+        updated_at: Aktualizováno
+        user: Uživatel
+      auth/identity:
+        created_at: Vytvořeno
+        email: Email
+        name: Jméno
+        provider: Provider
+        uid: UID
+        updated_at: Aktualizováno
+        user: Uživatel
+      auth/role:
+        assignments: Přiřazení
+        created_at: Vytvořeno
+        name: Název
+        updated_at: Aktualizováno
+        users: Uživatelé
+      auth/user:
+        anonym: Anonymní uživatel
+        assignments: Přiřazení
+        avatar: Avatar
+        avatar_tmp: Avatar tmp soubor
+        confirmation_sent_at: Potvrzení účtu odesláno
+        confirmation_token: Konfirmační token
+        confirmed_at: "Účet potvrzen"
+        created_at: Vytvořeno
+        current_password: Vaše heslo
+        current_sign_in_at: Momentálně přihlášen
+        current_sign_in_ip: Momentálně přihlášen z IP
+        email: Email
+        encrypted_password: Kódované heslo
+        failed_attempts: Neúspěšné pokusy k přihlášení
+        identities: Identity
+        last_sign_in_at: Naposledy přihlášen
+        last_sign_in_ip: Naposledy přihlášen z IP
+        locked_at: Blokován od
+        manage: Manažerský mód
+        name: Jméno
+        password: Heslo
+        password_confirmation: Potvrzení hesla
+        remember_created_at: Zapamatovat si vytvořeno
+        reset_password_sent_at: Reset hesla odeslán dne
+        reset_password_token: Token k resetu hesla
+        roles: Oprávnění
+        sign_in_count: Počet přihlášení
+        unconfirmed_email: Nepotvrzený email
+        unlock_token: Token k odblokaci
+        updated_at: Aktualizováno
+        xeditable: X-Editable
     models:
       auth/assignment:
         one: Přiřazení
@@ -16,52 +66,3 @@ cs:
       auth/user:
         one: Uživatel
         other: Uživatelé
-
-    attributes:
-      auth/assignment:
-        user: Uživatel
-        role: Oprávnění
-        <<: *cuat
-      auth/identity:
-        user: Uživatel
-        uid: UID
-        provider: Provider
-        name: Jméno
-        email: Email
-        <<: *cuat
-      auth/role:
-        name: Název
-        assignments: Přiřazení
-        users: Uživatelé
-        <<: *cuat
-      auth/user:
-        email: Email
-        password: Heslo
-        password_confirmation: Potvrzení hesla
-        current_password: Vaše heslo
-        encrypted_password: Kódované heslo
-        reset_password_token: Token k resetu hesla
-        reset_password_sent_at: Reset hesla odeslán dne
-        remember_created_at: Zapamatovat si vytvořeno
-        sign_in_count: Počet přihlášení
-        current_sign_in_at: Momentálně přihlášen
-        last_sign_in_at: Naposledy přihlášen
-        current_sign_in_ip: Momentálně přihlášen z IP
-        last_sign_in_ip: Naposledy přihlášen z IP
-        confirmation_token: Konfirmační token
-        confirmed_at: Účet potvrzen
-        confirmation_sent_at: Potvrzení účtu odesláno
-        unconfirmed_email: Nepotvrzený email
-        failed_attempts: Neúspěšné pokusy k přihlášení
-        unlock_token: Token k odblokaci
-        locked_at: Blokován od
-        name: Jméno
-        avatar: Avatar
-        avatar_tmp: Avatar tmp soubor
-        xeditable: X-Editable
-        manage: Manažerský mód
-        anonym: Anonymní uživatel
-        assignments: Přiřazení
-        roles: Oprávnění
-        identities: Identity
-        <<: *cuat

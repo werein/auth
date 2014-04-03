@@ -1,10 +1,27 @@
+---
 en:
   auth:
+    cancan:
+      authorize: Please log in. We don't know, if you have privilegies to access this page
+      unauthorized: "We're sorry, you don't have access to this action"
+    dashboard:
+      authenticated:
+        alternatives: Other options
+        edit: Edit
+        logout: Logout
+        public_profile: Public profile
+        title: Your account
+      index:
+        alternatives: Other options
+        remember_me: Remember me
+        sign_up: Don't have account? Please sign up
+        submit: Submit
+        title: Please sign in
     helper:
       create_button:
-        create: 'Create %{model}'
+        create: Create %{model}
       manage_buttons:
         create: Create
-        edit: Edit
         destroy: Destroy
+        edit: Edit
         view: View all
