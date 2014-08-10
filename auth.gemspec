@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'omniauth-twitter', '~> 1.0'
   s.add_dependency 'omniauth-facebook', '~> 1.4'
   s.add_dependency 'cancancan', '~> 1.7'
-  s.add_dependency 'route_translator', '3.1.0'
+  s.add_dependency 'route_translator', '>= 3.2.4'
   s.add_dependency 'meta-tags', '~> 1.5'
   s.add_dependency 'decorators', '~> 1.0'
   s.add_dependency 'uppr', '~> 1.0'
